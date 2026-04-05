@@ -1,0 +1,13 @@
+prefix=D:/aiLearning/tuteDude_learning/titanic dataset/venv/Library
+exec_prefix=D:/aiLearning/tuteDude_learning/titanic dataset/venv/Library
+libdir=D:/aiLearning/tuteDude_learning/titanic dataset/venv/Library/lib
+sharedlibdir=D:/aiLearning/tuteDude_learning/titanic dataset/venv/Library/lib
+includedir=D:/aiLearning/tuteDude_learning/titanic dataset/venv/Library/include
+
+Name: zlib
+Description: zlib compression library
+Version: 1.3.1
+
+Requires:
+Libs: -L${libdir} -L${sharedlibdir} -lz
+Cflags: -I${includedir}
