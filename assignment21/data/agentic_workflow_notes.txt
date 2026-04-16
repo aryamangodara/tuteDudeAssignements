@@ -1,0 +1,23 @@
+
+# Advanced Agentic Workflows: A Technical Overview
+
+In modern AI development, the shift from "Chat" to "Agents" represents a move from single-turn inference to multi-step reasoning. As an AI Developer, mastering these patterns is essential for building robust, production-grade systems.
+
+## 1. The Planning Pattern
+Before execution, a high-functioning agent breaks a complex prompt into a directed acyclic graph (DAG) of sub-tasks.
+- **Self-Correction:** If a sub-task fails (e.g., a Python script throws an error), the agent analyzes the traceback and reformulates the plan.
+- **Dynamic Routing:** Choosing between a vector database search or a direct API call based on the user's intent.
+
+## 2. Tool Use (Function Calling)
+Agents interact with the world via "tools." 
+- **Sandboxed Execution:** Running generated code in an isolated environment to prevent system corruption.
+- **Schema Validation:** Ensuring the LLM outputs correctly formatted JSON that matches the expected API parameters.
+
+## 3. Retrieval-Augmented Generation (RAG) vs. Long Context
+While models like Gemini 1.5 Pro offer massive context windows, RAG remains relevant for:
+- **Cost Efficiency:** Processing millions of tokens for every query is expensive.
+- **Data Freshness:** Real-time updates without retraining or re-indexing massive amounts of static data.
+
+## 4. Memory Management
+- **Short-term:** The current conversation buffer.
+- **Long-term:** Persistent storage (like a vector DB or metadata store) that allows an agent to "remember" user preferences across sessions.
